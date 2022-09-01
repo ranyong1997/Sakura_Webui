@@ -179,7 +179,6 @@ export default defineComponent({
               } else {
                 router.push('/')
               }
-              console.log("accessToken--->", accessToken)
               ElMessage({
                 type: 'success',
                 message: '🎊🎊登录成功'

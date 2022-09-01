@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-08-31 18:00:13
+ * @LastEditTime: 2022-09-01 11:53:58
+ */
 const steps = [
   {
     element: '#Hamburger',

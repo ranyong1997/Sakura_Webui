@@ -1,11 +1,4 @@
-/*
- * @Author: GeekQiaQia
- * @Date: 2021-12-30 15:50:10
- * @LastEditTime: 2021-12-30 17:22:30
- * @LastEditors: GeekQiaQia
- * @Description:
- * @FilePath: /vue3.0-template-admin/src/views/Dashboard/useInitEcharts.ts
- */
+
 import * as echarts from 'echarts/core'
 import { TitleComponent, TitleComponentOption, GridComponent, GridComponentOption, DataZoomComponent, DataZoomComponentOption } from 'echarts/components'
 import { BarChart, BarSeriesOption } from 'echarts/charts'

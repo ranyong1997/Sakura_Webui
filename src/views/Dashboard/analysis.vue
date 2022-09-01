@@ -2,43 +2,53 @@
   <div class="analysis-info">
     <el-row style="margin: 15px">
       <el-col :span="24" class="page-title-box">
-        <h4 class="page-title">Dashboard</h4>
+        <h4 class="page-title">数据统计</h4>
         <div class="page-title-right">
-          <div style="margin-right: 10px"><el-date-picker v-model="pickDate" type="date" placeholder="选择日期"> </el-date-picker></div>
+          <div style="margin-right: 10px">
+            <el-date-picker v-model="pickDate" type="date" placeholder="选择日期"> </el-date-picker>
+          </div>
           <el-button :icon="Refresh" circle type="primary" style="maring-left: 10px"></el-button>
           <el-button :icon="Search" circle type="primary"></el-button>
         </div>
       </el-col>
     </el-row>
+
     <el-row>
       <el-col :xl="10">
         <el-row>
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
-                <h5 class="text-muted">Customers</h5>
-                <i class="widget-icon"><ShoppingCartFull /></i>
+                <h5 class="text-muted">用户总数及近一周新增</h5>
+                <i class="widget-icon">
+                  <UserFilled />
+                </i>
               </div>
               <div class="card-middle margin-top-2 margin-bottom-2">
-                <h3>37,258</h3>
+                <h3>338</h3>
               </div>
               <div class="card-footer text-muted">
-                <span class="text-success margin-right-1"><Top />6.28%</span>
-                <span class="text-nowrap">since last week </span>
+                <span class="text-success margin-right-1">
+                  <Top />6.28%
+                </span>
               </div>
             </el-card>
           </el-col>
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
-                <h5 class="text-muted">Orders</h5>
-                <i class="widget-icon"><GoodsFilled /></i>
+                <h5 class="text-muted">项目总数及近一周新增趋势</h5>
+                <i class="widget-icon">
+                  <Management />
+                </i>
               </div>
               <div class="card-middle margin-top-2 margin-bottom-2">
                 <h3>3,258</h3>
               </div>
               <div class="card-footer text-muted">
-                <span class="text-danger margin-right-1"><Top />2.28%</span>
+                <span class="text-danger margin-right-1">
+                  <Top />2.28%
+                </span>
                 <span class="text-nowrap">since last week </span>
               </div>
             </el-card>
@@ -48,15 +58,19 @@
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
-                <h5 class="text-muted">Revenue</h5>
+                <h5 class="text-muted">测试用例总数及一周新增趋势</h5>
 
-                <i class="widget-icon"><Coin /></i>
+                <i class="widget-icon">
+                  <List />
+                </i>
               </div>
               <div class="card-middle margin-top-2 margin-bottom-2">
                 <h3>￥3,258</h3>
               </div>
               <div class="card-footer text-muted">
-                <span class="text-danger margin-right-1"><Top />3.28%</span>
+                <span class="text-danger margin-right-1">
+                  <Top />3.28%
+                </span>
                 <span class="text-nowrap">since last week </span>
               </div>
             </el-card>
@@ -64,14 +78,18 @@
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
-                <h5 class="text-muted">Growth</h5>
-                <i class="widget-icon"><DataLine /></i>
+                <h5 class="text-muted">测试计划总数及一周新增趋势</h5>
+                <i class="widget-icon">
+                  <TrendCharts />
+                </i>
               </div>
               <div class="card-middle margin-top-2 margin-bottom-2">
                 <h3>+ 20.48%</h3>
               </div>
               <div class="card-footer text-muted">
-                <span class="text-success margin-right-1"><Top />5.28%</span>
+                <span class="text-success margin-right-1">
+                  <Top />5.28%
+                </span>
                 <span class="text-nowrap">since last week </span>
               </div>
             </el-card>
@@ -82,7 +100,9 @@
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">products</h4>
-            <div class="dropdown"><MoreFilled /></div>
+            <div class="dropdown">
+              <MoreFilled />
+            </div>
           </div>
           <div style="height: 300px" class="e-chart">
             <div ref="refProduct" style="width: inherit; height: inherit"></div>
@@ -95,7 +115,9 @@
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">Revene</h4>
-            <div class="dropdown"><MoreFilled /></div>
+            <div class="dropdown">
+              <MoreFilled />
+            </div>
           </div>
           <div class="chart-bg padding-top-1 padding-bottom-1">
             <el-row>
@@ -124,7 +146,9 @@
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">Revene by Location</h4>
-            <div class="dropdown"><MoreFilled /></div>
+            <div class="dropdown">
+              <MoreFilled />
+            </div>
           </div>
           <div class="margin-top-2 margin-bottom-2">
             <div id="world-map-markers" style="height: 224px">
@@ -147,10 +171,12 @@
         <el-card shadow="hover" class="card">
           <div class="header-title" style="margin-bottom: 32px">
             <h4 class="text-muted">TOP SELLING PRODUCTS</h4>
-            <div class="btn-link" @click="handleExportExcel"><span style="margin-right: 5px; display: inline-block">Export</span><i class="el-icon-download"></i></div>
+            <div class="btn-link" @click="handleExportExcel"><span
+                style="margin-right: 5px; display: inline-block">Export</span><i class="el-icon-download"></i></div>
           </div>
           <el-table id="tableId" ref="tableRef" :data="state.tableData" highlight-current-row style="width: 100%">
-            <el-table-column v-for="item in tableColumn" :key="item.prop" :fixed="item.fixed" :prop="item.prop" :label="item.label" :width="item.width"> </el-table-column>
+            <el-table-column v-for="item in tableColumn" :key="item.prop" :fixed="item.fixed" :prop="item.prop"
+              :label="item.label" :width="item.width"> </el-table-column>
           </el-table>
         </el-card>
       </el-col>
@@ -158,7 +184,9 @@
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">TOTAL SALES</h4>
-            <div class="dropdown"><MoreFilled /></div>
+            <div class="dropdown">
+              <MoreFilled />
+            </div>
           </div>
           <div class="e-chart" style="height: 201px; width: 100%">
             <!-- <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
@@ -179,13 +207,15 @@
               <span><i class="icon-square red"></i> Video Ads </span><span>￥26000</span>
             </p>
           </div>
-        </el-card></el-col
-      >
+        </el-card>
+      </el-col>
       <el-col :xl="6">
         <el-card shadow="hover" class="card bg-primary">
           <div class="header-title">
             <h4 class="text-white">AVERAGE SALE SIZE</h4>
-            <div class="dropdown"><MoreFilled class="text-white" style="color: whilte" /></div>
+            <div class="dropdown">
+              <MoreFilled class="text-white" style="color: whilte" />
+            </div>
           </div>
           <div>
             <div class="text-badge"><span class="badge badge-danger">-23.47%</span></div>
@@ -197,19 +227,14 @@
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">RECENT ACTIVITY</h4>
-            <div class="dropdown"><MoreFilled /></div>
+            <div class="dropdown">
+              <MoreFilled />
+            </div>
           </div>
           <div style="height: 128px; overflow: scroll; padding: 5px">
             <el-timeline>
-              <el-timeline-item
-                v-for="(activity, index) in activities"
-                :key="index"
-                :icon="activity.icon"
-                :type="activity.type"
-                :color="activity.color"
-                :size="activity.size"
-                :timestamp="activity.timestamp"
-              >
+              <el-timeline-item v-for="(activity, index) in activities" :key="index" :icon="activity.icon"
+                :type="activity.type" :color="activity.color" :size="activity.size" :timestamp="activity.timestamp">
                 {{ activity.content }}
               </el-timeline-item>
             </el-timeline>
@@ -221,7 +246,10 @@
 </template>
 <script setup lang="ts">
 import { onMounted, ref, reactive } from 'vue'
-import { Top, MoreFilled, ShoppingCartFull, Refresh, Search, GoodsFilled, Coin, DataLine } from '@element-plus/icons-vue'
+import {
+  Top, Bottom, MoreFilled,
+  TrendCharts, Management, List, UserFilled, Notebook, Refresh, Search, GoodsFilled, Coin, DataLine
+} from '@element-plus/icons-vue'
 
 import XLSX from 'xlsx'
 import { useInitChart } from './useInitEcharts'
@@ -229,7 +257,6 @@ import { useInitLineChart } from './useInitLineCharts'
 import { useInitPieChart } from './useInitPieCharts'
 
 import WorldMap from '@/components/WorldMap.vue'
-
 interface stateTypes {
   tableData: {
     date: string
@@ -244,7 +271,6 @@ interface stateTypes {
     fileType: XLSX.BookType
   }
 }
-
 const pickDate = ref('')
 const refProduct = ref<HTMLElement | undefined>()
 const refLineChart = ref<HTMLElement | undefined>()

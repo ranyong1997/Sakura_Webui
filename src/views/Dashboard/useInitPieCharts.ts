@@ -1,11 +1,11 @@
 /*
- * @Author: GeekQiaQia
- * @Date: 2021-12-31 14:16:33
- * @LastEditTime: 2021-12-31 15:12:35
- * @LastEditors: GeekQiaQia
- * @Description:
- * @FilePath: /vue3.0-template-admin/src/views/Dashboard/useInitPieCharts.ts
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-08-31 18:00:13
+ * @LastEditTime: 2022-09-01 11:49:24
  */
+
 
 import * as echarts from 'echarts/core'
 import { TooltipComponent, TooltipComponentOption, LegendComponent, LegendComponentOption } from 'echarts/components'

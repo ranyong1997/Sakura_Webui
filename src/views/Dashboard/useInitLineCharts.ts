@@ -1,11 +1,11 @@
 /*
- * @Author: GeekQiaQia
- * @Date: 2021-12-30 17:22:19
- * @LastEditTime: 2021-12-30 17:34:03
- * @LastEditors: GeekQiaQia
- * @Description:
- * @FilePath: /vue3.0-template-admin/src/views/Dashboard/useInitLineCharts.ts
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-08-31 18:00:13
+ * @LastEditTime: 2022-09-01 11:49:05
  */
+
 
 import * as echarts from 'echarts/core'
 import { TitleComponent, ToolboxComponent, TooltipComponent, GridComponent, LegendComponent } from 'echarts/components'

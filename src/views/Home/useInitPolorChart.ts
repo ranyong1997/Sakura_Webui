@@ -1,11 +1,11 @@
 /*
- * @Author: GeekQiaQia
- * @Date: 2022-01-10 13:58:13
- * @LastEditTime: 2022-01-10 14:05:31
- * @LastEditors: GeekQiaQia
- * @Description:
- * @FilePath: /vue3.0-template-admin/src/views/Home/useInitPolorChart.ts
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-08-31 18:00:13
+ * @LastEditTime: 2022-09-01 10:37:42
  */
+// 活动图
 import * as echarts from 'echarts/core'
 import { PolarComponent, PolarComponentOption, LegendComponent, LegendComponentOption } from 'echarts/components'
 import { BarChart, BarSeriesOption } from 'echarts/charts'

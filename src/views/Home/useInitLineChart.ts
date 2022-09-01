@@ -1,12 +1,11 @@
 /*
- * @Author: GeekQiaQia
- * @Date: 2022-01-10 14:50:22
- * @LastEditTime: 2022-01-10 14:54:21
- * @LastEditors: GeekQiaQia
- * @Description:
- * @FilePath: /vue3.0-template-admin/src/views/Home/useInitLineChart.ts
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-08-31 18:00:13
+ * @LastEditTime: 2022-09-01 10:36:21
  */
-
+// 趋势图
 import * as echarts from 'echarts/core'
 import { GridComponent, GridComponentOption } from 'echarts/components'
 import { LineChart, LineSeriesOption } from 'echarts/charts'

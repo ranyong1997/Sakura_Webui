@@ -3,10 +3,10 @@ import request from '@/utils/request'
 const loginApi = {
   userLogin: '/api/auth/login',
   userRegister: '/api/auth/register',
-  sendCaptcha: '/api/auth/email/sendCaptcha',
-  forgetPassword: '/api/auth/email/forgot-password',
-  resetPassword: `/api/auth/user/reset-password`,
-  permissionRoutes: '/api/auth/permission/routes',
+  sendCaptcha: '',
+  forgetPassword: '',
+  resetPassword: '',
+  permissionRoutes: '',
   userInfo: '/api/auth/query'
 }
 
