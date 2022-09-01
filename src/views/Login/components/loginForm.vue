@@ -161,11 +161,8 @@ export default defineComponent({
             }
             const res = await Service.postLogin(data)
             localStorage.setItem('token', res)
-            console.log("res------>", res)
             const userInfo = await Service.postAuthUserInfo()
-            console.log("userInfo------>", userInfo)
             const accessToken = res;
-            console.log("accessToken------>", accessToken)
             if (accessToken) {
               // 将角色存储到全局vuex roles
               if (userInfo.code === 0) {
@@ -182,16 +179,21 @@ export default defineComponent({
               } else {
                 router.push('/')
               }
+              console.log("accessToken--->", accessToken)
+              ElMessage({
+                type: 'success',
+                message: '🎊🎊登录成功'
+              })
             } else {
               ElMessage({
                 type: 'warning',
-                message: '账号或者密码有误'
+                message: '❗❗账号或者密码有误'
               })
             }
           } catch (err) {
             ElMessage({
               type: 'warning',
-              message: err.message
+              message: err.msg
             })
           }
         }
@@ -223,20 +225,20 @@ export default defineComponent({
                 } else {
                   ElMessage({
                     type: 'warning',
-                    message: res.message
+                    message: res.msg
                   })
                 }
               })
               .catch((err) => {
                 ElMessage({
                   type: 'warning',
-                  message: err.message
+                  message: err.msg
                 })
               })
           } catch (err) {
             ElMessage({
               type: 'error',
-              message: err.message
+              message: err.msg
             })
           }
         }

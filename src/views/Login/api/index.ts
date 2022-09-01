@@ -123,10 +123,8 @@ class Service {
       url: loginApi.userInfo,
       method: 'GET',
       json: false,
-      headers: {'X-Custom-Header': "123"},
-      params:{token:localStorage.getItem('token')}
+      params: { token: localStorage.getItem('token') }
     }).then((res) => {
-      console.log("--->查询用户信息",res)
       if (res.code === 0) {
         return Promise.resolve(res)
       }
