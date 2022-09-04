@@ -67,7 +67,6 @@ import { useRouter } from 'vue-router'
 import Hamburger from '@/components/Hamburger/Hamburger.vue'
 import Breadcrumb from '@/components/Breadcrumb/index.vue'
 import Search from '@/components/Search/index.vue'
-import LangSwitch from '@/components/LangSwitch/index.vue'
 import avatar from '@/assets/avatar-default.jpg'
 import { toFullScreen, exitFullScreen } from '@/utils/screen'
 import { useStore } from '@/store/index'
@@ -79,7 +78,6 @@ export default defineComponent({
     Hamburger,
     Breadcrumb,
     Search,
-    LangSwitch,
     Message,
     FullScreen,
     BottomLeft
