@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-09-03 10:33:50
+ * @LastEditTime: 2022-09-04 11:51:32
+-->
 <template>
   <div class="sidebar-logo-container">
     <transition name="sidebarLogoFade">
@@ -14,7 +21,7 @@
 </template>
 <script lang="ts">
 import { computed, defineComponent, reactive, toRefs } from 'vue'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.svg'
 import { useStore } from '../../../store/index'
 
 export default defineComponent({

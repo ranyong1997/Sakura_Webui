@@ -1,19 +1,14 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: 冉勇
+ * @Date: 2022-09-03 10:33:50
+ * @LastEditTime: 2022-09-04 11:47:37
+ */
 const defaultSetting = {
-  title: 'VUE3-VITE-TEMPLATE',
-  /**
-   * @type {boolean} true | false
-   * @description whether fix the header
-   */
+  title: '波塞冬测试平台',
   fixedHeader: false,
-  /**
-   * @type {boolean} true | false
-   * @description whether show the logo in sidebar
-   */
   sideBarLogo: true,
-  /**
-   * @type {boolean} true | false
-   * @description whether show the rightPanel // 设置中心
-   */
   showSettings: true
 }
 

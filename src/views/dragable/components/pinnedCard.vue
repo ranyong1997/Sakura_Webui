@@ -61,7 +61,7 @@ export default defineComponent({
         },
         {
           id: 3,
-          imgSrc: 'https://v3.cn.vuejs.org/logo.png',
+          imgSrc: 'https://v3.cn.vuejs.org/logo.svg',
           cardTitle: 'vue-next',
           link: 'https://v3.cn.vuejs.org/',
           cardContent: 'Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架,Vue 被设计为可以自底向上逐层应用。'

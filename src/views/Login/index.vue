@@ -24,7 +24,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import viteLogo from '@/assets/logo-vite.svg'
-import vueLogo from '@/assets/logo.png'
+import vueLogo from '@/assets/logo.svg'
 import working from '@/assets/woking.gif'
 import Login from './components/loginForm.vue'
 import ForgetPassword from './components/forgetPassword.vue'

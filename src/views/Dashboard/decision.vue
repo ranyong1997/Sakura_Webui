@@ -3,7 +3,7 @@
  * @version: 
  * @Author: 冉勇
  * @Date: 2022-09-04 10:16:45
- * @LastEditTime: 2022-09-04 10:46:49
+ * @LastEditTime: 2022-09-04 11:44:30
 -->
 <template>
     <div class="analysis-info">
@@ -60,6 +60,9 @@
                             <div class="card-footer text-muted">
                                 <span class="text-danger margin-right-1">
                                     <!-- todo：echarts表 -->
+                                    <div class="e-chart" style="height: 20px; width: 100%">
+                                        <div ref="refLineChart" style="width: inherit; height: inherit"></div>
+                                    </div>
                                 </span>
                             </div>
                         </el-card>
@@ -103,6 +106,130 @@
                 </el-row>
             </el-col>
         </el-row>
+        <el-row>
+            <el-col :xl="10">
+                <el-row>
+                    <!-- 近一周用例通过率(%)-->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted">近一周用例通过率(%)</h5>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>74.36%</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-success margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <!-- 近一周运行用例个数 -->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted">近一周运行用例个数</h5>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>24</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-danger margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <!-- 近一周用例失败个数 -->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted">近一周用例失败个数</h5>
+                                <i class="widget-icon">
+                                    <List />
+                                </i>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>2</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-danger margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <!-- 近一周用例错误个数 -->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted">近一周用例错误个数</h5>
+                                <i class="widget-icon">
+                                    <TrendCharts />
+                                </i>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>8</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-success margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <!--  近一周用例成功个数-->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted"> 近一周用例成功个数</h5>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>29</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-success margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <!-- 近一周用例跳过个数 -->
+                    <el-col :lg="8">
+                        <el-card shadow="hover" class="card">
+                            <div class="card-header">
+                                <h5 class="text-muted">近一周用例跳过个数</h5>
+                            </div>
+                            <div class="card-middle margin-top-2 margin-bottom-2">
+                                <h3>0</h3>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <span class="text-danger margin-right-1">
+                                    <!-- todo:echarts图表 -->
+                                </span>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </el-col>
+            <el-col :xl="14">
+                <!-- 底部预留图表 -->
+                <el-card shadow="hover" class="card">
+                    <div class="header-title">
+                        <h4 class="text-muted">底部预留图表</h4>
+                        <div class="dropdown">
+                            <MoreFilled />
+                        </div>
+                    </div>
+                    <!-- todo:echarts图表 -->
+                </el-card>
+            </el-col>
+        </el-row>
     </div>
 </template>
 <script setup lang="ts">
@@ -111,12 +238,14 @@ import { onMounted, ref } from 'vue'
 import { TrendCharts, Management, List, UserFilled } from '@element-plus/icons-vue'
 // 导入echarts数据
 import { useInitPolorChart } from './useInitPolorChart'
+import { useInitGridChart } from './useInitLineChart'
 
 const RefPolorChart = ref()
+const refLineChart = ref()
 // 注册
 onMounted(() => {
     useInitPolorChart(RefPolorChart.value)
-
+    useInitGridChart(refLineChart.value)
 })
 </script>
 <style lang="stylus" scoped>
@@ -323,31 +452,29 @@ onMounted(() => {
         justify-content center
         align-items center
         .icon{
-          width 20px
-          height 20px
+        width 20px
+        height 20px
         }
-      }
     }
-    .card-middle{
-      display flex
-      flex-direction row
-      justify-content flex-start
-      align-items center
-      color #6c757d
-    }
-    .card-footer{
-      display flex
-      flex-direction row
-      justify-content flex-start
-      align-items center
-    }
-
+}
+.card-middle{
+    display flex
+    flex-direction row
+    justify-content flex-start
+    align-items center
+    color #6c757d
+}
+.card-footer{
+    display flex
+    flex-direction row
+    justify-content flex-start
+    align-items center
+}
     .e-chart{
-      margin auto
-      position relative
-      width 100%
+    margin auto
+    position relative
+    width 100%
     }
-  }
-
+}
 }
 </style>
