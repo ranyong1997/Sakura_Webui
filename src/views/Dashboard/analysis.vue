@@ -16,6 +16,7 @@
     <el-row>
       <el-col :xl="10">
         <el-row>
+          <!-- 用户总数及近一周新增 -->
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
@@ -34,6 +35,7 @@
               </div>
             </el-card>
           </el-col>
+          <!-- 项目总数及近一周新增趋势 -->
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
@@ -55,6 +57,7 @@
           </el-col>
         </el-row>
         <el-row>
+          <!-- 测试用例总数及一周新增趋势 -->
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
@@ -75,6 +78,7 @@
               </div>
             </el-card>
           </el-col>
+          <!-- 测试计划总数及一周新增趋势 -->
           <el-col :lg="12">
             <el-card shadow="hover" class="card">
               <div class="card-header">
@@ -97,9 +101,10 @@
         </el-row>
       </el-col>
       <el-col :xl="14">
+        <!-- 每月用例总数量 -->
         <el-card shadow="hover" class="card">
           <div class="header-title">
-            <h4 class="text-muted">products</h4>
+            <h4 class="text-muted">每月用例总数量</h4>
             <div class="dropdown">
               <MoreFilled />
             </div>
@@ -112,6 +117,7 @@
     </el-row>
     <el-row>
       <el-col :span="16">
+        <!-- Revene -->
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">Revene</h4>
@@ -143,9 +149,10 @@
         </el-card>
       </el-col>
       <el-col :span="8">
+        <!-- 按位置计算 -->
         <el-card shadow="hover" class="card">
           <div class="header-title">
-            <h4 class="text-muted">Revene by Location</h4>
+            <h4 class="text-muted">按位置计算</h4>
             <div class="dropdown">
               <MoreFilled />
             </div>
@@ -168,9 +175,10 @@
     </el-row>
     <el-row>
       <el-col :xl="12">
+        <!-- 用例数量排行Top10 -->
         <el-card shadow="hover" class="card">
           <div class="header-title" style="margin-bottom: 32px">
-            <h4 class="text-muted">TOP SELLING PRODUCTS</h4>
+            <h4 class="text-muted">用例数量排行Top10</h4>
             <div class="btn-link" @click="handleExportExcel"><span
                 style="margin-right: 5px; display: inline-block">Export</span><i class="el-icon-download"></i></div>
           </div>
@@ -181,6 +189,7 @@
         </el-card>
       </el-col>
       <el-col :xl="6">
+        <!-- TOTAL SALES -->
         <el-card shadow="hover" class="card">
           <div class="header-title">
             <h4 class="text-muted">TOTAL SALES</h4>
@@ -189,8 +198,6 @@
             </div>
           </div>
           <div class="e-chart" style="height: 201px; width: 100%">
-            <!-- <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-              </div> -->
             <div ref="refAverageSales" style="width: inherit; height: inherit"></div>
           </div>
           <div class="chart-widget-list">
@@ -210,6 +217,7 @@
         </el-card>
       </el-col>
       <el-col :xl="6">
+        <!-- AVERAGE SALE SIZE -->
         <el-card shadow="hover" class="card bg-primary">
           <div class="header-title">
             <h4 class="text-white">AVERAGE SALE SIZE</h4>
@@ -224,9 +232,10 @@
             <el-button type="primary" plain>more <i class="el-icon-arrow-right el-icon--right"></i></el-button>
           </div>
         </el-card>
+        <!-- 最近的活动 -->
         <el-card shadow="hover" class="card">
           <div class="header-title">
-            <h4 class="text-muted">RECENT ACTIVITY</h4>
+            <h4 class="text-muted">最近的活动</h4>
             <div class="dropdown">
               <MoreFilled />
             </div>

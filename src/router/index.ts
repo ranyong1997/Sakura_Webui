@@ -126,6 +126,20 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         }
       },
       {
+        path: '/dashboard/decision',
+        name: 'decision',
+        component: () => import(/* webpackChunkName: "richText" */ '@/views/Dashboard/decision.vue'),
+        meta: {
+          title: {
+            '/zh-CN': '分析页1',
+            '/en-US': 'Decision Page'
+          },
+          icon: 'el-icon-data-analysis',
+          hidden: false,
+          hiddenTab: false
+        }
+      },
+      {
         path: '/dashboard/workplace',
         name: 'workplace',
         component: () => import(/* webpackChunkName: "richText" */ '@/views/Dashboard/workplace.vue'),
